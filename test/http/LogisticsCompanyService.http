@@ -1,0 +1,134 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### VehiclesSet
+# @name VehiclesSet_GET
+GET {{server}}/odata/v4/logistics-company/VehiclesSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### VehiclesSet
+# @name VehiclesSet_POST
+POST {{server}}/odata/v4/logistics-company/VehiclesSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "regNumber": "2125764",
+  "model": "KIA",
+  "inServiceSince": "2003-05-03",
+  "odometer": 22644061.6,
+  "totalHoursSpent": 7960986.28
+}
+
+
+### VehiclesSet
+# @name VehiclesSet_PATCH
+PATCH {{server}}/odata/v4/logistics-company/VehiclesSet/2125764
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "regNumber": "VehiclesSet-2125764",
+  "model": "model-2125764",
+  "inServiceSince": "2003-05-03",
+  "odometer": 22644061.6,
+  "totalHoursSpent": 7960986.28
+}
+
+
+### VehiclesSet
+# @name VehiclesSet_DELETE
+DELETE {{server}}/odata/v4/logistics-company/VehiclesSet/2125764
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### WorkOrders
+# @name WorkOrders_GET
+GET {{server}}/odata/v4/logistics-company/WorkOrders
+Authorization: Basic {{username}}:{{password}}
+
+
+### WorkOrders
+# @name WorkOrders_POST
+POST {{server}}/odata/v4/logistics-company/WorkOrders
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "11368423-b198-46f3-b07e-10bf3733771d",
+  "openedOn": "2002-06-29T00:00:00.000Z",
+  "closedOn": "2002-05-21T00:00:00.000Z",
+  "priority": "y-11368423",
+  "status": "status-11368423",
+  "issueSummary": "issueSummary-11368423"
+}
+
+
+### WorkOrders
+# @name WorkOrders_PATCH
+PATCH {{server}}/odata/v4/logistics-company/WorkOrders/11368423-b198-46f3-b07e-10bf3733771d
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "11368423-b198-46f3-b07e-10bf3733771d",
+  "openedOn": "2002-06-29T00:00:00.000Z",
+  "closedOn": "2002-05-21T00:00:00.000Z",
+  "priority": "y-11368423",
+  "status": "status-11368423",
+  "issueSummary": "issueSummary-11368423"
+}
+
+
+### WorkOrders
+# @name WorkOrders_DELETE
+DELETE {{server}}/odata/v4/logistics-company/WorkOrders/11368423-b198-46f3-b07e-10bf3733771d
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### WorkLogs
+# @name WorkLogs_GET
+GET {{server}}/odata/v4/logistics-company/WorkLogs
+Authorization: Basic {{username}}:{{password}}
+
+
+### WorkLogs
+# @name WorkLogs_POST
+POST {{server}}/odata/v4/logistics-company/WorkLogs
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "workOrder": "WorkLogs-2000757",
+  "logDate": "2007-06-28",
+  "hours": 19.26,
+  "mechanic": "mechanic-2000757",
+  "note": "note-2000757"
+}
+
+
+### WorkLogs
+# @name WorkLogs_PATCH
+PATCH {{server}}/odata/v4/logistics-company/WorkLogs/WorkLogs-2000757
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "workOrder": "WorkLogs-2000757",
+  "logDate": "2007-06-28",
+  "hours": 19.26,
+  "mechanic": "mechanic-2000757",
+  "note": "note-2000757"
+}
+
+
+### WorkLogs
+# @name WorkLogs_DELETE
+DELETE {{server}}/odata/v4/logistics-company/WorkLogs/WorkLogs-2000757
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
