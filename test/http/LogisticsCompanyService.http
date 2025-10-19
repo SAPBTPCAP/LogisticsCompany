@@ -16,11 +16,11 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "regNumber": "2125764",
+  "regNumber": "KA01AB1236",
   "model": "KIA",
   "inServiceSince": "2003-05-03",
-  "odometer": 22644061.6,
-  "totalHoursSpent": 7960986.28
+  "odometer": 2000000,
+  "totalHoursSpent": 200
 }
 
 

@@ -1,0 +1,32 @@
+Assignment :
+ A logistics company maintains its fleet of vehicles. Each vehicle can have multiple work orders,
+ and each work order can have multiple work logs recorded by mechanics.
+The system should store and display details such as vehicle model, maintenance tasks, and logged working hours.
+
+ you need to create 3 tables Vehicles, WorkOrders,WorkLogs
+
+ Tables fields:
+ Vehicles Table Fields
+    
+  regNumber        
+  model            
+  inServiceSince   
+  odometer         
+  totalHoursSpent   
+ 
+ WorkOrders Table Fields
+  
+ openedOn        
+  closedOn         
+  priority         
+  status           
+  issueSummary     
+
+ WorkLogs Table Fields
+
+  workOrder        
+  logDate         
+  hours            
+  mechanic        
+  note
+You should use All Annotations ,Assocaitions and compositions
