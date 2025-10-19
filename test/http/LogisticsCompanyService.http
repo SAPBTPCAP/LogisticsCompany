@@ -16,11 +16,20 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "regNumber": "KA01AB1236",
+  "regNumber": "KA01AB1230",
   "model": "KIA",
   "inServiceSince": "2003-05-03",
   "odometer": 2000000,
-  "totalHoursSpent": 200
+  "totalHoursSpent": 200,
+  "WorkLogs":[
+    {
+      "logDate"  :"2025-10-17",
+      "hours"   : "2.5",
+      "mechanic" :"John",
+      "note"  :"Routine service completed with no issues."
+    }
+  ]
+
 }
 
 

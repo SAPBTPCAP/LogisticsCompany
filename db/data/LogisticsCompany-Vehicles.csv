@@ -1,6 +1,2 @@
-regNumber,model,inServiceSince,odometer,totalHoursSpent
-Vehicles-24920064,KIA,2017-09-23,23618370.44,28399251.32
-Vehicles-24920065,model-24920065,2008-03-10,5432153.27,26702622.18
-Vehicles-24920066,model-24920066,2009-02-05,28301117.18,15466242.28
-Vehicles-24920067,model-24920067,2013-07-04,14198622.13,14377115.31
-Vehicles-24920068,model-24920068,2018-11-10,23928670.75,29638158.99
+regNumber,model,inServiceSince,odometer,totalHoursSpent,createdAt,createdBy,modifiedAt,modifiedBy
+"1,2}[A-Z]{0,2}\d{4}$",model-24790441,2014-11-24,1284798.13,2194.14,2000-09-15T00:00:00.000Z,createdBy.ercfd@example.org,2018-12-09T00:00:00.000Z,modifiedBy.ercfd@example.org
