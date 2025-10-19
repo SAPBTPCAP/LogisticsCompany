@@ -1,6 +1,3 @@
-workOrder,logDate,hours,mechanic,note,Vehicles_regNumber,WorkOrders_ID
-WorkLogs-29262484,2007-07-18,779.99,mechanic-29262484,note-29262484,1,2}[A-Z]{0,2}\d{4}$,21319949-e8e4-42cf-aa4d-0061b7380d1a
-WorkLogs-29262485,2017-11-18,513.3,mechanic-29262485,note-29262485,1,2}[A-Z]{0,2}\d{4}$,21319949-e8e4-42cf-aa4d-0061b7380d1a
-WorkLogs-29262486,2006-10-26,366,mechanic-29262486,note-29262486,1,2}[A-Z]{0,2}\d{4}$,21319949-e8e4-42cf-aa4d-0061b7380d1a
-WorkLogs-29262487,2023-03-24,108.28,mechanic-29262487,note-29262487,1,2}[A-Z]{0,2}\d{4}$,21319949-e8e4-42cf-aa4d-0061b7380d1a
-WorkLogs-29262488,2003-12-01,866.11,mechanic-29262488,note-29262488,1,2}[A-Z]{0,2}\d{4}$,21319949-e8e4-42cf-aa4d-0061b7380d1a
+workOrder,logDate,hours,mechanic,note,workOrders_ID
+WorkLogs-9803917,2010-11-23,894.19,mechanic-9803917,note-9803917,9174080b-b63e-4def-bc59-eb7ee9aa4071
+WorkLogs-9803918,2008-07-17,672.22,mechanic-9803918,note-9803918,9174080b-b63e-4def-bc59-eb7ee9aa4071

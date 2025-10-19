@@ -1,2 +1,2 @@
 regNumber,model,inServiceSince,odometer,totalHoursSpent,createdAt,createdBy,modifiedAt,modifiedBy
-"1,2}[A-Z]{0,2}\d{4}$",model-24790441,2014-11-24,1284798.13,2194.14,2000-09-15T00:00:00.000Z,createdBy.ercfd@example.org,2018-12-09T00:00:00.000Z,modifiedBy.ercfd@example.org
+"1,2}[A-Z]{0,2}\d{4}$",model-25921,2000-10-19,810427.17,1991.25,2010-08-31T00:00:00.000Z,createdBy.k01@example.com,2003-04-07T00:00:00.000Z,modifiedBy.k01@example.net

@@ -12,8 +12,7 @@ entity  Vehicles:managed{
       inServiceSince  : Date @title : '{i18n>inServiceSince}';
       odometer        : Decimal(10,2) @title : '{i18n>odometer}' @assert.range: [0, 2000000];
       totalHoursSpent : Decimal(10,2) @title : '{i18n>totalHoursSpent}'@assert.range:[0,3000];
-     // WorkLogs:Association to many WorkLogs on WorkLogs.Vehicles =$self;
-       WorkLogs:Composition of many  WorkLogs on WorkLogs.Vehicles =$self;
+      WorkOrders:composition of many WorkOrders on WorkOrders.vehicle = $self; // Composition: One Vehicle → Many Work Orders
 
  }
     
@@ -25,7 +24,9 @@ entity  WorkOrders{
       priority     : String(10);
       status       : String(20);
       issueSummary : String(255);
-    //Vehicles:Association to WorkOrders;
+    vehicle : Association to Vehicles; // Association: to parent Vehicle
+    WorkLogs: composition of many WorkLogs on WorkLogs.workOrders = $self;  
+  // Composition: One Work Order → Many Work Logs
 
 }
 
@@ -36,7 +37,6 @@ entity  WorkLogs{
       hours     : Decimal(5,2);
       mechanic  : String(50);
       note      : LargeString;
-        Vehicles :Association to Vehicles;
-        WorkOrders:Association to WorkOrders;
+      workOrders : Association to WorkOrders;// Association: to parent Work Order
 
 }
