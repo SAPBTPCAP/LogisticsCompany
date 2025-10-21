@@ -7,7 +7,8 @@ using { managed } from '@sap/cds/common';
 }
 
 entity  Vehicles:managed{
-  key regNumber       : String(20)@title : '{i18n>regnumber}' @assert.format : '^[A-Z]{2}\d{1,2}[A-Z]{0,2}\d{4}$';
+      key vehicleID:UUID;
+      regNumber       : String(20)@title : '{i18n>regnumber}' @assert.format : '^[A-Z]{2}\d{1,2}[A-Z]{0,2}\d{4}$';
       model           : localized String(50)   @title:'{i18n>model}' @mandatory;
       inServiceSince  : Date @title : '{i18n>inServiceSince}';
       odometer        : Decimal(10,2) @title : '{i18n>odometer}' @assert.range: [0, 2000000];
@@ -18,7 +19,8 @@ entity  Vehicles:managed{
     
 
 entity  WorkOrders{
-     key ID        :UUID @mandatory;
+  
+     key WorkOrdersID        :UUID @mandatory;
       openedOn     :localized DateTime @title : '{i18n>Orders OpenedOn}' @mandatory;
       closedOn     : DateTime;
       priority     : String(10);
@@ -31,8 +33,8 @@ entity  WorkOrders{
 }
 
 entity  WorkLogs{
-
-  key workOrder :String(20) @mandatory;
+       key WorkLogsID  : UUID  @mandatory;
+       workOrder :String(20);
       logDate   : localized  Date @mandatory;
       hours     : Decimal(5,2);
       mechanic  : String(50);

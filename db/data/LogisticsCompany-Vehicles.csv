@@ -1,2 +1,6 @@
-regNumber,model,inServiceSince,odometer,totalHoursSpent,createdAt,createdBy,modifiedAt,modifiedBy
-"1,2}[A-Z]{0,2}\d{4}$",model-25921,2000-10-19,810427.17,1991.25,2010-08-31T00:00:00.000Z,createdBy.k01@example.com,2003-04-07T00:00:00.000Z,modifiedBy.k01@example.net
+vehicleID,regNumber,model,inServiceSince,odometer,totalHoursSpent,createdAt,createdBy,modifiedAt,modifiedBy
+28916310-c8ec-4486-a31e-3ce9a552a2d6,"1,2}[A-Z]{0,2}\d{4}$",model-28916310,2008-05-24,830759.23,2824.12,2014-07-24T00:00:00.000Z,createdBy.h7ryu@example.net,2002-11-18T00:00:00.000Z,modifiedBy.h7ryu@example.com
+28916311-822c-4625-9510-cf151bf9e22b,"1,2}[A-Z]{0,2}\d{4}$",model-28916311,2008-12-25,1286195.29,2781.41,2020-02-15T00:00:00.000Z,createdBy.h7ryv@example.com,2010-05-28T00:00:00.000Z,modifiedBy.h7ryv@example.net
+28916312-d392-4b60-a436-6a5b6593d8ca,"1,2}[A-Z]{0,2}\d{4}$",model-28916312,2012-10-22,664997.1,1391.12,2017-06-13T00:00:00.000Z,createdBy.h7ryw@example.net,2015-04-14T00:00:00.000Z,modifiedBy.h7ryw@example.org
+28916313-8616-4205-a455-1a608cab28f4,"1,2}[A-Z]{0,2}\d{4}$",model-28916313,2022-07-27,1832796.18,1892.48,2004-11-25T00:00:00.000Z,createdBy.h7ryx@example.org,2018-04-06T00:00:00.000Z,modifiedBy.h7ryx@example.org
+28916314-69cf-46eb-8459-7a228447f38a,"1,2}[A-Z]{0,2}\d{4}$",model-28916314,2012-12-24,1269977.32,1026.3,2012-01-21T00:00:00.000Z,createdBy.h7ryy@example.com,2006-08-22T00:00:00.000Z,modifiedBy.h7ryy@example.com

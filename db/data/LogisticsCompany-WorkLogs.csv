@@ -1,3 +1,3 @@
-workOrder,logDate,hours,mechanic,note,workOrders_ID
-WorkLogs-9803917,2010-11-23,894.19,mechanic-9803917,note-9803917,9174080b-b63e-4def-bc59-eb7ee9aa4071
-WorkLogs-9803918,2008-07-17,672.22,mechanic-9803918,note-9803918,9174080b-b63e-4def-bc59-eb7ee9aa4071
+WorkLogsID,logDate,hours,mechanic,note,workOrders_WorkOrdersID
+15549706-cc06-4dd3-8b33-72eff1801b12,2006-03-03,102.22,mechanic-15549706,note-15549706,5766934e-9eec-4d3d-a0bb-e34e1e243c3e
+15549707-7f87-4943-a17b-0233e3fa3eb4,2003-04-03,604.13,mechanic-15549707,note-15549707,5766934e-9eec-4d3d-a0bb-e34e1e243c3e
