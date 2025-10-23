@@ -16,17 +16,19 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "regNumber": "KA01AB1230",
+  "regNumber": "MH12AB1239",
   "model": "KIA",
   "inServiceSince": "2003-05-03",
   "odometer": 2000000,
   "totalHoursSpent": 200,
-  "WorkLogs":[
+  "WorkOrders":[
     {
-      "logDate"  :"2025-10-17",
-      "hours"   : "2.5",
-      "mechanic" :"John",
-      "note"  :"Routine service completed with no issues."
+      "WorkOrdersID": "WO123",
+     "openedOn"     : "2025-10-23",
+     "closedOn"     : null,
+     "priority"     : "High",
+      "status"       : "open",
+     "issueSummary" :"Brake inspection required"
     }
   ]
 

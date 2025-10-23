@@ -2,7 +2,6 @@ namespace LogisticsCompany;
 using { managed } from '@sap/cds/common';
 
 @assert.unique: {
-
  regNumber:[regNumber]
 }
 
@@ -17,14 +16,20 @@ entity  Vehicles:managed{
 
  }
     
-
+type WorkOrdersStatus : String(20) enum{
+  InProgress = 'Inprogress';
+  open = 'Open';
+  onhold = 'On Hold';
+  completed = 'Completed';
+  canceled = 'Canceled';
+}
 entity  WorkOrders{
   
      key WorkOrdersID        :UUID @mandatory;
       openedOn     :localized DateTime @title : '{i18n>Orders OpenedOn}' @mandatory;
       closedOn     : DateTime;
       priority     : String(10);
-      status       : String(20);
+      status       : localized WorkOrdersStatus  @title : '{i18n>Status}'  default #onhold;
       issueSummary : String(255);
     vehicle : Association to Vehicles; // Association: to parent Vehicle
     WorkLogs: composition of many WorkLogs on WorkLogs.workOrders = $self;  
