@@ -1,3 +1,5 @@
+17/10:
+
 Assignment :
  A logistics company maintains its fleet of vehicles. Each vehicle can have multiple work orders,
  and each work order can have multiple work logs recorded by mechanics.
@@ -30,3 +32,84 @@ The system should store and display details such as vehicle model, maintenance t
   mechanic        
   note
 You should use All Annotations ,Assocaitions and compositions
+
+25/10:
+
+Please add below functionalities and should complete by Tuesday along with Today discussed assignment in class
+
+1. WorkLogs — validations (critical)
+
+hours must be present, numeric, > 0 and ≤ 16.
+
+logDate must be present .
+
+mechanic must be non-empty.
+
+2. WorkOrders — validations & rules
+
+closedOn (if provided) must not be earlier than openedOn.
+
+If status = Closed then closedOn must be provided.
+
+3. Vehicles — validations
+
+regNumber must be provided and non-empty. 
+
+odometer (if provided) cannot be decreased on UPDATE (new odometer >= stored odometer).
+
+
+Please add below functionalities and should complete by Tuesday along with Today discussed assignment in class
+1. WorkLogs — validations (critical)
+
+==>hours must be present, numeric, > 0 and ≤ 16.
+
+this.before(['CREATE', 'UPDATE'], WorkLogs, async (req) => {
+  console.log('Before CREATE/UPDATE WorkLogs', req.data);
+
+  const { hours } = req.data;
+ if (hours === undefined || hours === null) {
+        return req.error(400, 'hours must be provided');
+      }
+      if (isNaN(hours)) {
+        return req.error(400, 'hours must be numeric');
+      }
+      if (hours <= 0 || hours > 16) {
+        return req.error(400, 'hours must be > 0 and ≤ 16');
+      }
+    });
+
+==>logDate must be present .
+
+this.before(['CREATE', 'UPDATE'], WorkLogs, async (req) => {
+  console.log('Before CREATE/UPDATE WorkLogs', req.data);
+
+  const { logDate } = req.data;
+
+   if (!logDate) {
+    return req.error(400, 'Log Date must be provided.');
+  }
+});
+
+==> mechanic must be non-empty.
+
+this.before(['CREATE', 'UPDATE'], WorkLogs, async (req) => {
+  console.log('Before CREATE/UPDATE WorkLogs', req.data);
+
+  const { mechanic } = req.data;
+   if (!mechanic?.trim())
+   
+    return req.error(400, 'mechanic must be non-empty.');
+});
+
+2. WorkOrders — validations & rules
+
+closedOn (if provided) must not be earlier than openedOn.
+
+If status = Closed then closedOn must be provided.
+
+3. Vehicles — validations
+
+regNumber must be provided and non-empty. 
+
+odometer (if provided) cannot be decreased on UPDATE (new odometer >= stored odometer).
+

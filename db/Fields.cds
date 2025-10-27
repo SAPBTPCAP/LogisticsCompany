@@ -25,7 +25,7 @@ type WorkOrdersStatus : String(20) enum{
 }
 entity  WorkOrders{
   
-     key WorkOrdersID        :UUID @mandatory;
+     key WorkOrdersID        :UUID ;
       openedOn     :localized DateTime @title : '{i18n>Orders OpenedOn}' @mandatory;
       closedOn     : DateTime;
       priority     : String(10);
@@ -40,7 +40,7 @@ entity  WorkOrders{
 entity  WorkLogs{
        key WorkLogsID  : UUID  @mandatory;
        workOrder :String(20);
-      logDate   : localized  Date @mandatory;
+      logDate   :  localized DateTime @mandatory;
       hours     : Decimal(5,2);
       mechanic  : String(50);
       note      : LargeString;

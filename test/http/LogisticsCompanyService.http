@@ -16,7 +16,7 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "regNumber": "MH12AB1239",
+  "regNumber": " ",
   "model": "KIA",
   "inServiceSince": "2003-05-03",
   "odometer": 2000000,
@@ -70,12 +70,12 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "11368423-b198-46f3-b07e-10bf3733771d",
-  "openedOn": "2002-06-29T00:00:00.000Z",
-  "closedOn": "2002-05-21T00:00:00.000Z",
+  
+  "openedOn": "2025-10-10",
+  "closedOn": "2025-10-12",
   "priority": "y-11368423",
-  "status": "status-11368423",
-  "issueSummary": "issueSummary-11368423"
+  "status": "not Closed",
+  "issueSummary": "Brakes issue"
 }
 
 
@@ -115,11 +115,11 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "workOrder": "WorkLogs-2000757",
+   "WorkLogsID": "e7f1f40d-1b2a-4f35-bd56-bbb4f478e8a7",
   "logDate": "2007-06-28",
-  "hours": 19.26,
-  "mechanic": "mechanic-2000757",
-  "note": "note-2000757"
+  "hours": 20,
+  "mechanic": " ",
+  "note": "Brake inspection"
 }
 
 
@@ -132,7 +132,7 @@ Authorization: Basic {{username}}:{{password}}
 {
   "workOrder": "WorkLogs-2000757",
   "logDate": "2007-06-28",
-  "hours": 19.26,
+  "hours": 0,
   "mechanic": "mechanic-2000757",
   "note": "note-2000757"
 }
