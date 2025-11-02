@@ -4,6 +4,8 @@ module.exports = class LogisticsCompanyService extends cds.ApplicationService { 
 
   const { VehiclesSet, WorkOrders, WorkLogs } = cds.entities('LogisticsCompanyService')
 
+   
+
   this.before (['CREATE', 'UPDATE'], VehiclesSet, async (req) => {
     console.log('Before CREATE/UPDATE VehiclesSet', req.data)
     const { regNumber} = req.data;
@@ -31,10 +33,26 @@ module.exports = class LogisticsCompanyService extends cds.ApplicationService { 
   this.after ('READ', WorkOrders, async (workOrders, req) => {
     console.log('After READ WorkOrders', workOrders)
   })
+
+//reopenWorkOrder
+  this.on('reopenWorkOrder', async (req) => {
+    const { WorkOrdersID } = req.data;
+
+    await UPDATE(WorkOrders)
+      .set({ status: 'InProgress', closedOn: null })
+      .where({ WorkOrdersID });
+
+    return SELECT.one.from(WorkOrders).where({ WorkOrdersID });
+  });
+
+  
+
+
  this.before(['CREATE', 'UPDATE'], WorkLogs, async (req) => {
   console.log('Before CREATE/UPDATE WorkLogs', req.data);
 
-  const {hours,logDate,mechanic} = req.data; 
+  const {hours,mechanic} = req.data; 
+  
 
   if (hours === undefined || hours === null) {
         return req.error(400, 'hours must be provided');
@@ -45,12 +63,13 @@ module.exports = class LogisticsCompanyService extends cds.ApplicationService { 
       if (hours <= 0 || hours > 16) {
         return req.error(400, 'hours must be > 0 and ≤ 16');
       }
-   if (!logDate) {
+
+   if (!req.data.logDate) {
     return req.error(400, 'Log Date must be provided.');
   }
 
-  if (!mechanic?.trim())
-     return req.error(400, 'mechanic must be non-empty.');
+  //if (!mechanic?.trim())
+    // return req.error(400, 'mechanic must be non-empty.');
   }
 );
 

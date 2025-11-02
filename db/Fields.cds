@@ -1,9 +1,9 @@
 namespace LogisticsCompany;
 using { managed } from '@sap/cds/common';
 
-@assert.unique: {
- regNumber:[regNumber]
-}
+//@assert.unique: {
+ //regNumber:[regNumber]
+//}
 
 entity  Vehicles:managed{
       key vehicleID:UUID;
@@ -25,7 +25,7 @@ type WorkOrdersStatus : String(20) enum{
 }
 entity  WorkOrders{
   
-     key WorkOrdersID        :UUID ;
+     key WorkOrdersID      :UUID ;
       openedOn     :localized DateTime @title : '{i18n>Orders OpenedOn}' @mandatory;
       closedOn     : DateTime;
       priority     : String(10);
@@ -38,9 +38,9 @@ entity  WorkOrders{
 }
 
 entity  WorkLogs{
-       key WorkLogsID  : UUID  @mandatory;
-       workOrder :String(20);
-      logDate   :  localized DateTime @mandatory;
+  key WorkLogsID  : UUID  @mandatory;
+       workOrder :localized String(20);
+        logDate   :  DateTime ;
       hours     : Decimal(5,2);
       mechanic  : String(50);
       note      : LargeString;

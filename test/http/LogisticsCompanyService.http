@@ -117,8 +117,8 @@ Authorization: Basic {{username}}:{{password}}
 {
    "WorkLogsID": "e7f1f40d-1b2a-4f35-bd56-bbb4f478e8a7",
   "logDate": "2007-06-28",
-  "hours": 20,
-  "mechanic": " ",
+  "hours": 16,
+  "mechanic": " lee",
   "note": "Brake inspection"
 }
 
@@ -143,3 +143,25 @@ Authorization: Basic {{username}}:{{password}}
 DELETE {{server}}/odata/v4/logistics-company/WorkLogs/WorkLogs-2000757
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
+
+
+### WorkOrders
+# @name WorkOrders_POST
+POST {{server}}/odata/v4/logistics-company/reopenWorkOrder
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "WorkOrdersID":"17739105-2696-449c-8569-4a75c9e90020"
+  
+}
+
+
+
+
+
+
+
+
+
+
