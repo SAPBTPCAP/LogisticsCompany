@@ -145,7 +145,7 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 
-### WorkOrders
+### Action to reopenWorkOrder
 # @name WorkOrders_POST
 POST {{server}}/odata/v4/logistics-company/reopenWorkOrder
 Content-Type: application/json
@@ -158,6 +158,17 @@ Authorization: Basic {{username}}:{{password}}
 
 
 
+
+
+### Action to closeWorkOrder 
+# closeWorkOrder
+POST {{server}}/odata/v4/project/closeWorkOrder
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "WorkOrdersID":"17739105-2696-449c-8569-4a75c9e90020"
+}
 
 
 

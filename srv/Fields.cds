@@ -7,5 +7,6 @@ service LogisticsCompanyService {
    entity WorkLogs as projection on LogisticsCompany.WorkLogs;
    
    action reopenWorkOrder(WorkOrdersID: UUID) returns WorkOrders;
+   action closeWorkOrder(WorkOrdersID : UUID) returns WorkOrders;
   
 }

@@ -37,13 +37,42 @@ module.exports = class LogisticsCompanyService extends cds.ApplicationService { 
 //reopenWorkOrder
   this.on('reopenWorkOrder', async (req) => {
     const { WorkOrdersID } = req.data;
+    let Test = new Date()
 
     await UPDATE(WorkOrders)
-      .set({ status: 'InProgress', closedOn: null })
+      .set({ status: 'InProgress', closedOn:Test })
       .where({ WorkOrdersID });
 
     return SELECT.one.from(WorkOrders).where({ WorkOrdersID });
   });
+
+//closeworkorder
+  this.on('closeWorkOrder',async(req) =>
+    {
+      
+      if(!req.data.ID){
+        return req.error('ID is required')
+      }
+     const WorkOrders = await SELECT.one.from(WorkOrders).where({ID:req.data.ID});
+    if (!WorkOrders)
+       return req.error(404, `WorkOrder with ID not found`);
+
+  
+    const today = new Date();
+    const updatedData = {
+      status: 'Closed',
+      closedOn: today,
+    };
+
+    
+    await UPDATE(WorkOrders).set(updatedData)
+      .where({ID:req.data.ID});
+
+    const updatedWorkOrder = await SELECT.one.from(WorkOrders).where({ ID:req.data.ID});
+    return updatedWorkOrder;
+  });
+
+
 
   
 

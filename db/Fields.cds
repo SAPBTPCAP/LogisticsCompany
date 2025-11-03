@@ -25,7 +25,7 @@ type WorkOrdersStatus : String(20) enum{
 }
 entity  WorkOrders{
   
-     key WorkOrdersID      :UUID ;
+     key WorkOrdersID:UUID ;
       openedOn     :localized DateTime @title : '{i18n>Orders OpenedOn}' @mandatory;
       closedOn     : DateTime;
       priority     : String(10);
