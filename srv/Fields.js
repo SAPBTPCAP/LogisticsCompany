@@ -57,7 +57,6 @@ module.exports = class LogisticsCompanyService extends cds.ApplicationService { 
     if (!WorkOrders)
        return req.error(404, `WorkOrder with ID not found`);
 
-  
     const today = new Date();
     const updatedData = {
       status: 'Closed',

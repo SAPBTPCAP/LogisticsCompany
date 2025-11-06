@@ -162,7 +162,7 @@ Authorization: Basic {{username}}:{{password}}
 
 ### Action to closeWorkOrder 
 # closeWorkOrder
-POST {{server}}/odata/v4/project/closeWorkOrder
+POST {{server}}/odata/v4/logistics-company/closeWorkOrder
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
